@@ -4,25 +4,26 @@ using namespace std;
 #include "monopoly.hpp"
 
 
-void theBoard::append(int num){
+void theBoard::append(string name){
    monopoly* newNode = new monopoly;
-   newNode->data = num;
-   newNode->next = nullptr;
+   newNode->name = name;
 
    if(head == nullptr){
       head = newNode;
       tail = newNode;
       current = head;
+      tail->next = head; // Make it circular
    } else {
       tail->next = newNode;
       tail = newNode;
+      tail->next = head; // Make it circular
    }
 }
-int theBoard::retrieve(){
+string theBoard::retrieve(){
    if(current == nullptr){
-      return -1;
+      return "";
    }
-   return current->data;
+   return current->name;
 }
 
 void theBoard::move(int spaces){

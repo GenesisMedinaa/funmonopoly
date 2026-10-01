@@ -5,8 +5,9 @@
 #include <string>
 using namespace std;
 
+
 struct monopoly{
-    int data;
+    string name;
     monopoly* next;
 };
 
@@ -22,8 +23,8 @@ class theBoard{
       current = nullptr;
    }
 
-   void append(int num);
-   int retrieve();
+   void append(string name);
+   string retrieve();
    void move(int spaces);   
 };
 

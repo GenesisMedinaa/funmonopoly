@@ -5,14 +5,21 @@ using namespace std;
 
 int main(){
   theBoard board;
-  board.append(1);
-  board.append(2);
-  board.append(3);
+  board.append("Go");
+  board.append("Mediterranean Avenue");
+  board.append("Community Chest");
+  board.append("Baltic Avenue");
+  board.append("Income Tax");
+  
+  cout << board.retrieve() << endl; // Should print "Go"
+  board.move(1);
+  cout << board.retrieve() << endl; // Should print "Mediterranean Avenue"
+  board.move(3);
+  cout << board.retrieve() << endl; // Should print "Income Tax"
 
-  cout << board.retrieve() << endl; //expect output: 1
-  board.move(1);
-  cout << board.retrieve() << endl; //expect output: 2
-  board.move(1);
-  cout << board.retrieve() << endl; //expect output: 3
+  for (int i = 0; i < 37; i++){
+    board.move(1);
+  }
+  cout << board.retrieve() << endl; // Should print the next space in the circular list
 
 }
