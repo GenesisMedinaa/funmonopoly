@@ -1,7 +1,18 @@
+using namespace std;
 #include <iostream>
+#include <string>
+#include "src/monopoly.hpp"
 
-#include "src/factorial.hpp"
+int main(){
+  theBoard board;
+  board.append(1);
+  board.append(2);
+  board.append(3);
 
-int main() {
-  std::cout << "The factorial of 5 is " << factorial(5) << std::endl;
+  cout << board.retrieve() << endl; //expect output: 1
+  board.move(1);
+  cout << board.retrieve() << endl; //expect output: 2
+  board.move(1);
+  cout << board.retrieve() << endl; //expect output: 3
+
 }
