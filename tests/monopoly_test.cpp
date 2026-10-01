@@ -5,9 +5,9 @@
 
 
 TEST_CASE( "it computes the factorial of different numbers" ) {
-   // REQUIRE
+   // not used
 }
 
 TEST_CASE("benchmarking the factorial function") {
-  //  BENCHMARK("
+  //  not used
 }

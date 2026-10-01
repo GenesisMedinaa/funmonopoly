@@ -3,6 +3,7 @@ using namespace std;
 #include <string>
 #include "src/monopoly.hpp"
 
+//template code as given in assingment
 int main(){
   theBoard board;
   board.append("Go");

@@ -4,6 +4,7 @@ using namespace std;
 #include "monopoly.hpp"
 
 
+//Append new node/name to the circular linked list
 void theBoard::append(string name){
    monopoly* newNode = new monopoly;
    newNode->name = name;
@@ -19,6 +20,8 @@ void theBoard::append(string name){
       tail->next = head; // Make it circular
    }
 }
+
+//string return of current node name
 string theBoard::retrieve(){
    if(current == nullptr){
       return "";
@@ -26,6 +29,7 @@ string theBoard::retrieve(){
    return current->name;
 }
 
+//Only moves forward -- move through circular list
 void theBoard::move(int spaces){
    for(int i = 0; i < spaces; i++){
       if(current != nullptr){
